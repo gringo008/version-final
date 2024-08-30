@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Tazas</title>
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+
+    <a href="https://api.whatsapp.com/qr/YV6SKOTCAHSGP1" class="whatsapp-button" target="_blank" aria-label="Chat en WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    
+    <header>
+        <div class="logo">Don Tazas</div>
+        <div id="cart-icon" class="cart-icon">
+            <img src="./imagenes.html/CARRITO.png" alt="Carrito de compras">
+            <span id="cart-count"></span> <!-- Contador de artículos en el carrito -->
+        </div>
+    </header>
+
+    <!-- Carrito deslizante -->
+    <div id="shopping-cart" class="cart">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+        </div>
+        <div id="cart-items">
+            <!-- Los artículos del carrito se generan aquí dinámicamente -->
+        </div>
+        <div id="cart-summary">
+            <div id="cart-subtotal">Subtotal: $0</div>
+            <div id="cart-total">Total: $0</div>
+            <button id="checkout-button" onclick="window.location.href='https://wa.me/qr/YV6SKOTCAHSGP1'">Pagar</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <div class="title">Una taza en el desayuno</div>
+            <div class="detail">
+                <div class="info">
+                    <h2>Quién somos</h2>
+                    <div class="DES">
+                        Bienvenidos a Don Tazas, donde encontrarás tazas únicas que añaden alegría y estilo a tu rutina diaria. Ofrecemos diseños para todos los gustos, desde divertidos y personalizados hasta elegantes, perfectos para cualquier ocasión. Nuestra pasión es ofrecer tazas de alta calidad que transformen tu día con un toque de personalidad.
+                        Nos apasiona ofrecer productos de alta calidad que no solo son funcionales, sino que también aportan un toque de personalidad a tu día a día.
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./imagenes.html/logo.webp" alt="Taza de Stitch">
+                </div>
+                <div class="opcion">
+                    Somos de Córdoba Capital y nos especializamos en la venta de tazas. Realizamos envíos y también ofrecemos la opción de retirar tu pedido en un punto de encuentro.
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <h2>Nuevos modelos</h2>
+            <div class="items">
+                <!-- Productos se generan aquí dinámicamente -->
+                <!-- Los productos se enumeran a continuación -->
+                <div class="item" data-product="pato">
+                    <img src="./imagenes.html/Pato.jpeg" alt="Taza de gravity falls">
+                    <div class="content">
+                        <div class="title">Taza De Pato</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="bellota">
+                    <img src="./imagenes.html/bellota.jpeg" alt="Taza de las chicas super poderosas">
+                    <div class="content">
+                        <div class="title">Taza De Bellota</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="bombom">
+                    <img src="./imagenes.html/bombom.jpeg" alt="Taza de las chicas super poderosas">
+                    <div class="content">
+                        <div class="title">Taza de Bombom</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="burbuja">
+                    <img src="./imagenes.html/BURBUJA.jpeg" alt="Taza de las chicas super poderosas">
+                    <div class="content">
+                        <div class="title">Taza De Burbuja</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="homero">
+                    <img src="./imagenes.html/homero.jpeg" alt="Taza de Unicornio">
+                    <div class="content">
+                        <div class="title">Taza de Homero</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="patricio">
+                    <img src="./imagenes.html/Patricio.jpeg" alt="Taza de Bulldog">
+                    <div class="content">
+                        <div class="title">Taza de Patricio</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="starwars">
+                    <img src="./imagenes.html/starwars.jpeg" alt="Taza de Zorro">
+                    <div class="content">
+                        <div class="title">Taza De Star Wars</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="bob-esponja">
+                    <img src="./imagenes.html/BOB ESPONJA.jpeg" alt="Taza de Koala">
+                    <div class="content">
+                        <div class="title">Taza de Bob Esponja</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="bts">
+                    <img src="./imagenes.html/BTS.jpeg" alt="Taza de BTS">
+                    <div class="content">
+                        <div class="title">Taza De BTS</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="capitan-america">
+                    <img src="./imagenes.html/CAPITAN AMERICA.jpeg" alt="Taza de Capitán América">
+                    <div class="content">
+                        <div class="title">Taza De Capitán América</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="cerdito">
+                    <img src="./imagenes.html/cerdito.jpeg" alt="Taza de Cerdito">
+                    <div class="content">
+                        <div class="title">Taza de Cerdito</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="donald">
+                    <img src="./imagenes.html/DONALD.jpeg" alt="Taza de Donald">
+                    <div class="content">
+                        <div class="title">Taza De Donald</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="frase1">
+                    <img src="./imagenes.html/FRASES 1.jpeg" alt="Taza de frase 1">
+                    <div class="content">
+                        <div class="title">Taza de Frase 1</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="frase2">
+                    <img src="./imagenes.html/FRASES 2.jpeg" alt="Taza de frase 2">
+                    <div class="content">
+                        <div class="title">Taza de Frase 2</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="frase3">
+                    <img src="./imagenes.html/FRASES 3.jpeg" alt="Taza de Frase 3">
+                    <div class="content">
+                        <div class="title">Taza De Frase 3</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="frase4">
+                    <img src="./imagenes.html/FRASES 4.jpeg" alt="Taza de Frase 4">
+                    <div class="content">
+                        <div class="title">Taza de Frase 4</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="gatito">
+                    <img src="./imagenes.html/gatito.jpeg" alt="Taza de Gatito">
+                    <div class="content">
+                        <div class="title">Taza De Gatito</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="hello-kitty">
+                    <img src="./imagenes.html/hello kitty.jpeg" alt="Taza de Hello Kitty">
+                    <div class="content">
+                        <div class="title">Taza De Hello Kitty</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="homero-pasto">
+                    <img src="./imagenes.html/HOMERO PASTO.jpeg" alt="Taza de Homero escondido">
+                    <div class="content">
+                        <div class="title">Taza de Homero Escondido</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="marvel">
+                    <img src="./imagenes.html/MARVEL.jpeg" alt="Taza de Marvel">
+                    <div class="content">
+                        <div class="title">Taza De Marvel</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="ohana">
+                    <img src="./imagenes.html/OHANA.jpeg" alt="Taza de Ohana">
+                    <div class="content">
+                        <div class="title">Taza de Ohana</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="panda">
+                    <img src="./imagenes.html/PANDA.jpeg" alt="Taza de Panda">
+                    <div class="content">
+                        <div class="title">Taza de Panda</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="item" data-product="patita">
+                    <img src="./imagenes.html/patita.jpeg" alt="Taza de Patita">
+                    <div class="content">
+                        <div class="title">Taza De Patita</div>
+                        <div class="price">$5000</div>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+   <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <a href="login.html" class="user-link">
+            <button class="user-button">Usuario</button>
+        </a>
+        <div class="copyright">
+            &copy; 2024 Don Tazas. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        function redirectToWhatsApp() {
+            window.location.href = "https://wa.me/qr/YV6SKOTCAHSGP1";
+        }
+
+        function loadPrices() {
+            const products = [
+                'pato', 'bellota', 'bombom', 'burbuja',
+                'homero', 'patricio', 'starwars', 'bob-esponja',
+                'bts', 'capitan-america', 'cerdito', 'donald',
+                'frase1', 'frase2', 'frase3', 'frase4',
+                'gatito', 'hello-kitty', 'homero-pasto', 'marvel',
+                'ohana', 'panda', 'patita'
+            ];
+
+            products.forEach(product => {
+                const priceElement = document.querySelector(`.item[data-product="${product}"] .price`);
+                const price = localStorage.getItem(`price-${product}`) || '5000';
+                if (priceElement) {
+                    priceElement.innerText = `$${price}`;
+                }
+
+                const imgElement = document.querySelector(`.item[data-product="${product}"] img`);
+                const imageUrl = localStorage.getItem(`image-${product}`);
+                if (imgElement && imageUrl) {
+                    imgElement.src = imageUrl;
+                }
+            });
+        }
+
+        window.onload = loadPrices;
+    </script>
+</body>
+</html>

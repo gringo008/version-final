@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Don Tazas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 50px;
+            height: auto;
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:disabled {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>Panel de Control - Don Tazas</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Imagen</th>
+                <th>Precio Actual</th>
+                <th>Nuevo Precio</th>
+            </tr>
+        </thead>
+        <tbody id="product-table">
+            <!-- Filas generadas dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+
+    <button class="button" id="save-button">Guardar Cambios</button>
+
+    <script>
+        // Definición de productos
+        const products = [
+            { name: 'Taza De Pato', id: 'pato', imageUrl: './imagenes.html/Pato.jpeg' },
+            { name: 'Taza De Bellota', id: 'bellota', imageUrl: './imagenes.html/bellota.jpeg' },
+            { name: 'Taza de Bombom', id: 'bombom', imageUrl: './imagenes.html/bombom.jpeg' },
+            { name: 'Taza De Burbuja', id: 'burbuja', imageUrl: './imagenes.html/BURBUJA.jpeg' },
+            { name: 'Taza de Homero', id: 'homero', imageUrl: './imagenes.html/homero.jpeg' },
+            { name: 'Taza de Patricio', id: 'patricio', imageUrl: './imagenes.html/Patricio.jpeg' },
+            { name: 'Taza De Star Wars', id: 'starwars', imageUrl: './imagenes.html/starwars.jpeg' },
+            { name: 'Taza de Bob Esponja', id: 'bob-esponja', imageUrl: './imagenes.html/BOB ESPONJA.jpeg' },
+            { name: 'Taza De BTS', id: 'bts', imageUrl: './imagenes.html/BTS.jpeg' },
+            { name: 'Taza De Capitán América', id: 'capitan-america', imageUrl: './imagenes.html/CAPITAN AMERICA.jpeg' },
+            { name: 'Taza de Cerdito', id: 'cerdito', imageUrl: './imagenes.html/cerdito.jpeg' },
+            { name: 'Taza De Donald', id: 'donald', imageUrl: './imagenes.html/DONALD.jpeg' },
+            { name: 'Taza de Frase 1', id: 'frase1', imageUrl: './imagenes.html/FRASES 1.jpeg' },
+            { name: 'Taza de Frase 2', id: 'frase2', imageUrl: './imagenes.html/FRASES 2.jpeg' },
+            { name: 'Taza de Frase 3', id: 'frase3', imageUrl: './imagenes.html/FRASES 3.jpeg' },
+            { name: 'Taza de Frase 4', id: 'frase4', imageUrl: './imagenes.html/FRASES 4.jpeg' },
+            { name: 'Taza De Gatito', id: 'gatito', imageUrl: './imagenes.html/gatito.jpeg' },
+            { name: 'Taza De Hello Kitty', id: 'hello-kitty', imageUrl: './imagenes.html/hello kitty.jpeg' },
+            { name: 'Taza de Homero Escondido', id: 'homero-pasto', imageUrl: './imagenes.html/HOMERO PASTO.jpeg' },
+            { name: 'Taza De Marvel', id: 'marvel', imageUrl: './imagenes.html/MARVEL.jpeg' },
+            { name: 'Taza de Ohana', id: 'ohana', imageUrl: './imagenes.html/OHANA.jpeg' },
+            { name: 'Taza de Panda', id: 'panda', imageUrl: './imagenes.html/PANDA.jpeg' },
+            { name: 'Taza De Patita', id: 'patita', imageUrl: './imagenes.html/patita.jpeg' }
+        ];
+
+        function loadProducts() {
+            const productTable = document.getElementById('product-table');
+
+            products.forEach(product => {
+                const currentPrice = localStorage.getItem(`price-${product.id}`) || '5000';
+
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${product.name}</td>
+                    <td><img src="${product.imageUrl}" alt="${product.name}"></td>
+                    <td>$<span class="current-price" data-product="${product.id}">${currentPrice}</span></td>
+                    <td><input type="number" min="1" data-product="${product.id}" class="new-price" placeholder="Nuevo Precio"></td>
+                `;
+
+                productTable.appendChild(row);
+            });
+        }
+
+        document.getElementById('save-button').addEventListener('click', () => {
+            const newPrices = document.querySelectorAll('.new-price');
+
+            newPrices.forEach(input => {
+                const productId = input.getAttribute('data-product');
+                const newPrice = input.value;
+
+                if (newPrice) {
+                    localStorage.setItem(`price-${productId}`, newPrice);
+                    document.querySelector(`.current-price[data-product="${productId}"]`).innerText = newPrice;
+                }
+            });
+
+            alert('Los cambios han sido guardados.');
+        });
+
+        window.onload = loadProducts;
+    </script>
+
+</form>
+</body>
+</html>
+

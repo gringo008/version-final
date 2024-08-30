@@ -1,0 +1,320 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E6E6FA; /* Violeta pastel */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.banner {
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.info {
+    width: 40%;
+}
+
+.img {
+    width: 30%;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.opcion {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.ellipse {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list {
+    margin-bottom: 40px;
+}
+
+.list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.1); /* Agranda la imagen un 10% */
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover img {
+    transform: translateY(-10px); /* Mueve la imagen hacia arriba */
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Contenedor del footer para alinear los elementos */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.copyright {
+    font-size: 14px; /* Tamaño del texto del copyright */
+    text-align: center; /* Alinea el texto al centro */
+    margin: 0; /* Elimina márgenes para centrar verticalmente */
+    flex: 1;
+}
+
+.user-button {
+    background-color: white; /* Color de fondo blanco */
+    color: #333; /* Color del texto */
+    border: 2px solid #333; /* Borde del botón */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra opcional para el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+    position: absolute; /* Posicionamiento absoluto dentro del footer */
+    left: 10px; /* Ajusta la distancia del botón desde el borde izquierdo */
+    bottom: 10px; /* Ajusta la distancia del botón desde el borde inferior */
+}
+
+.user-button:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el cursor */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Carrito de compras */
+.cart {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Inicialmente oculto, mostrado cuando se agregan artículos */
+    z-index: 1000;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#checkout-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Icono del carrito */
+.cart-icon {
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+    }
+
+    .banner {
+        margin-top: 10px;
+    }
+
+    .detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info, .img, .opcion {
+        width: 100%;
+        padding: 0;
+    }
+
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .cart-icon img {
+        width: 35px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .user-button {
+        font-size: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyright {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cart-icon img {
+        width: 30px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .user-button {
+        font-size: 12px;
+    }
+}
